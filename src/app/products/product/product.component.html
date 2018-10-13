@@ -1,0 +1,11 @@
+<p appStylish>
+  product works!
+</p>
+
+
+<p>ID: {{product.id}}</p>
+<p>NAME: {{product.name}}</p>
+<p>Capacity: {{product.capacity}}</p>
+<p *ngIf = "product.capacity === 0">Товар закончился </p>
+<button *ngIf="product.capacity > 0" (click)="onBuy($event)">Купить</button>
+<!--[disabled] = "product.capacity === 0"-->

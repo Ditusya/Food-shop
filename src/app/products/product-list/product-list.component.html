@@ -1,0 +1,15 @@
+<p>
+  product-list works!
+</p>
+<app-product
+  *ngFor="let product of products; let o=odd"
+  [ngClass]="o ? 'odd' : 'even'"
+  [product]="product"
+  (buy) = "onBuy($event)" >
+</app-product>
+
+<!--<div *ngFor="let product of products">-->
+  <!--<div>ID: {{product.id}}</div>-->
+  <!--<div>NAME: {{product.name}}</div>-->
+  <!--<div>Description: {{product.description}}</div>-->
+<!--</div>-->
